@@ -6,10 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Events | Western Systems Technologies LLP</title>
   <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 <body>
   <header class="navbar">
-    <div class="logo">WESTERN SYSTEMS TECHNOLOGIES LLP</div>
+
+    <div class="logo">
+    <a href="index.html">
+      <img src="Image/logo.png" >
+    </a>
+    </div>
+
+    
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="about us.html">About Us</a>
@@ -19,10 +30,13 @@
       <a href="events.html" class="active">Events</a>
       <a href="contact.html">Contact</a>
 
-      <form class="nav-search" action="#" method="get">
-      <input type="text" placeholder="Search..." name="q">
-      <button type="submit">🔍</button>
-    </form>
+     <!-- SEARCH BOX ADDED -->
+  <form class="global-search" onsubmit="return false;">
+  <input type="text" id="globalSearchInput" placeholder="Search..." />
+  <button type="button">
+    <i class="fa fa-search"></i>
+  </button>
+</form>
     </nav>
   </header>
 
@@ -31,12 +45,82 @@
     <p>Join us at leading technology exhibitions and symposiums around the world.</p>
   </section>
 
-  <section class="grid">
-    <div class="card"><h3>Photonics Europe 2025</h3><p>Paris, April 2025 – showcasing our latest laser and metrology systems.</p></div>
-    <div class="card"><h3>IEEE MTT-S 2025</h3><p>San Diego, June 2025 – presenting advanced RF & Microwave test platforms.</p></div>
-    <div class="card"><h3>Time & Frequency Forum</h3><p>Munich, October 2025 – unveiling our new synchronization solutions.</p></div>
+  <section class="events-grid">
+    <div class="event-card"><h3>Photonics Europe 2025</h3><p>Paris, April 2025 – showcasing our latest laser and metrology systems.</p></div>
+    <div class="event-card"><h3>IEEE MTT-S 2025</h3><p>San Diego, June 2025 – presenting advanced RF & Microwave test platforms.</p></div>
+    <div class="event-card"><h3>Time & Frequency Forum</h3><p>Munich, October 2025 – unveiling our new synchronization solutions.</p></div>
   </section>
+<!-- Footer -->
+  <footer class="site-footer">
+  <div class="footer-container">
 
-  <footer><div class="footer-content"><p>© 2025 Western Systems Technologies LLP - All Rights Reserved</p></div></footer>
-</body>
+    <!-- Company Info -->
+    <div class="footer-column">
+      <h4>Western Systems Technologies LLP</h4>
+      <p>
+        Specialized engineering and technology solutions for RF & Microwave,
+        Precise Time & Frequency, and Advanced Photonics applications.
+      </p>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <ul>
+        <li><strong>Email:</strong> info@wsysind.com</li>
+        <li><strong>Phone:</strong> +91-93437 48783</li>
+        <li><strong>Tel:</strong> +91-80-2523 4943</li>
+        <li><strong>Fax:</strong> +91-80-2523 5946</li>
+      </ul>
+    </div>
+
+    <!-- Address -->
+    <div class="footer-column">
+      <h4>Head Office</h4>
+      <p>
+        Western Systems Technologies LLP<br>
+        103, Connection Point, 1st Floor,<br>
+        Konena Agrahara, Murugeshpalya,<br>
+        Bengaluru – 560017, Karnataka, India
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    © Western Systems Technologies LLP — All Rights Reserved
+  </div>
+</footer>
 </html>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const searchInput = document.getElementById("globalSearchInput");
+  if (!searchInput) return;
+
+  // 🔥 ALL SEARCHABLE CARD TYPES
+  const cards = document.querySelectorAll(`
+    .rf-card,
+    .product-card,
+    .event-card,
+    .partner-box,
+    .application-card,
+    .time_product-card,
+    .value-card,
+    .team-card
+  `);
+
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase().trim();
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(query) ? "" : "none";
+    });
+  });
+
+});
+</script>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detection Systems | Western Systems Technologies LLP</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+  <header class="navbar">
+    
+    <div class="logo">
+    <a href="index.html">
+      <img src="Image/logo.png" >
+    </a>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about us.html">About Us</a>
+      <a href="partners.html">Partners</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="applications.html">Applications</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+
+
+  <form class="global-search" onsubmit="return false;">
+  <input type="text" id="globalSearchInput" placeholder="Search..." />
+  <button type="button">
+    <i class="fa fa-search"></i>
+  </button>
+</form>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1>Detection Systems</h1>
+    <p></p>
+  </section>
+
+  <section class="product-list">
+    <div class="rf-grid">
+    
+
+      <!-- 1 -->
+
+    <a href="https://www.izt-labs.de/izt/media/IZT-R5509-VHF_Radio_Direction_Finder-PI.pdf">
+    <div class="rf-card">
+      <img src="Image/IZT_R5500.jpg" alt="IZT R5509 Radio Direction Finder">
+      <div class="rf-card-content">
+        <h3>IZT R5509 VHF Radio Direction Finder</h3>
+        <p>
+          The IZT R5509 is a highly accurate and reliable radio direction finding (DF) system
+          designed for high resolution VHF direction estimation.
+        </p>
+      </div>
+    </div>
+    </a>
+
+    <!-- 2 -->
+    
+    <a href="https://www.ohb.de/fileadmin/ohb/Downloads/GIDAS_en.pdf">
+    <div class="rf-card">
+      <img src="Image/GIDAS.png" alt="GIDAS">
+      <div class="rf-card-content">
+        <h3>OHB - GIDAS</h3>
+        <p>
+          GIDAS (GNSS Interference Detection and Analysis System): a specialized, high-performance system for detecting, 
+          classifying, and localizing jamming and spoofing signals to protect GNSS (GPS, Galileo, etc.) services.
+        </p>
+      </div>
+    </div>
+    </a>
+   
+    <!--3-->
+
+    <a href="https://www.ohb-austria.at/wp-content/uploads/documents/navtd_m23_productsheet.pdf">
+    <div class="rf-card">
+      <img src="Image/NavTDM23.png" alt="OHB - NavTD M23 ">
+      <div class="rf-card-content">
+        <h3>OHB - NavTD M23 </h3>
+        <p>
+          NavTD M23 is able to generate and transmit jamming and spoofing signals to test the effect of navigation 
+          warfare and the capabilities of countermeasures in a real environment.
+
+        </p>
+      </div>
+    </div>
+    </a>
+    
+
+    <!--4-->
+
+    <a href="https://oscilion.com/eclipse/">
+    <div class="rf-card">
+      <img src="Image/Oscilion-Eclipse.png" alt="Eclipse – C-UAS system ">
+      <div class="rf-card-content">
+        <h3>Eclipse – C-UAS system</h3>
+        <p>
+          The C-UAS system Eclipse detects and disrupts drones across all known FPV frequency ranges, 
+          offering enhanced protection for artillery, troops and other military vehicles and installations.
+        </p>
+      </div>
+    </div>
+    </a>
+
+
+    <!--5-->
+
+    <a href="https://oscilion.com/astor-iv/">
+    <div class="rf-card">
+      <img src="Image/Oscilion - Astor.jpg" alt="Oscilion astor-iv ">
+      <div class="rf-card-content">
+        <h3>Oscilion - Astor IV</h3>
+        <p>
+          Oscilion has launched the ITAR-free ASTOR IV jamming system, 
+          designed for operator training and to counter modern jamming waveforms across the full EM radar spectrum.
+        </p>
+      </div>
+    </div>
+    </a>
+
+
+  </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- Company Info -->
+    <div class="footer-column">
+      <h4>Western Systems Technologies LLP</h4>
+      <p>
+        Specialized engineering and technology solutions for RF & Microwave,
+        Precise Time & Frequency, and Advanced Photonics applications.
+      </p>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <ul>
+        <li><strong>Email:</strong> info@wsysind.com</li>
+        <li><strong>Phone:</strong> +91-93437 48783</li>
+        <li><strong>Tel:</strong> +91-80-2523 4943</li>
+        <li><strong>Fax:</strong> +91-80-2523 5946</li>
+      </ul>
+    </div>
+
+    <!-- Address -->
+    <div class="footer-column">
+      <h4>Head Office</h4>
+      <p>
+        Western Systems Technologies LLP<br>
+        103, Connection Point, 1st Floor,<br>
+        Konena Agrahara, Murugeshpalya,<br>
+        Bengaluru – 560017, Karnataka, India
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    © Western Systems Technologies LLP — All Rights Reserved
+  </div>
+</footer>
+</body>
+</html>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const searchInput = document.getElementById("globalSearchInput");
+  if (!searchInput) return;
+
+  // 🔥 ALL SEARCHABLE CARD TYPES
+  const cards = document.querySelectorAll(`
+    .rf-card,
+    .product-card,
+    .event-card,
+    .partner-box,
+    .application-card,
+    .time_product-card,
+    .value-card,
+    .team-card
+  `);
+
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase().trim();
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(query) ? "" : "none";
+    });
+  });
+
+});
+</script>

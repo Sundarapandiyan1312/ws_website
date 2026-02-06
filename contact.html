@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,46 +5,180 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Western Systems Technologies LLP</title>
   <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-  <header class="navbar">
-    <div class="logo">WESTERN SYSTEMS TECHNOLOGIES LLP</div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about us.html">About Us</a>
-      <a href="partners.html">Partners</a>
-      <a href="products.html">Products</a>
-      <a href="applications.html">Applications</a>
-      <a href="events.html">Events</a>
-      <a href="contact.html" class="active">Contact</a>
 
-      <form class="nav-search" action="#" method="get">
-      <input type="text" placeholder="Search..." name="q">
-      <button type="submit">🔍</button>
+<header class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="Image/logo.png">
+    </a>
+  </div>
+
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about us.html">About Us</a>
+    <a href="partners.html">Partners</a>
+    <a href="products.html">Products</a>
+    <a href="applications.html">Applications</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html" class="active">Contact</a>
+
+    <form class="global-search" onsubmit="return false;">
+      <input type="text" id="globalSearchInput" placeholder="Search..." />
+      <button type="button">
+        <i class="fa fa-search"></i>
+      </button>
     </form>
-    </nav>
-  </header>
+  </nav>
+</header>
 
-  <section class="page-header">
-    <h1>Contact Us</h1>
-    <p>We’d love to hear from you. Let’s create precision together.</p>
-  </section>
+<section class="page-header">
+  <h1>Contact Us</h1>
+  <p>We’d love to hear from you. Let’s create precision together.</p>
+</section>
 
-  <section class="contact-form">
-    <form>
-      <label>Name</label>
-      <input type="text" placeholder="Your Name" required>
+<section class="contact-section">
+<div class="contact-container">
 
-      <label>Email</label>
-      <input type="email" placeholder="Your Email" required>
+<div class="contact-info">
+  <h2>Get in Touch</h2>
+  <p>
+    Connect with Western Systems Technologies LLP for mission-critical
+    RF, Time & Frequency, and Photonics solutions.
+  </p>
 
-      <label>Message</label>
-      <textarea rows="6" placeholder="Write your message here..." required></textarea>
+  <div class="contact-inline">
+    <div class="contact-row"><span class="label">Email :</span><span class="value">info@wsysind.com</span></div>
+    <div class="contact-row"><span class="label">Phone :</span><span class="value">+91-9343748783</span></div>
+    <div class="contact-row"><span class="label">Telephone :</span><span class="value">+91-80-25234943</span></div>
+    <div class="contact-row"><span class="label">Fax :</span><span class="value">+91-80-25235946</span></div>
 
-      <button type="submit" class="cta-btn">Send Message</button>
-    </form>
-  </section>
+    <div class="contact-row address">
+      <span class="label">Address :</span>
+      <span class="value">
+        Western Systems Technologies LLP,<br>
+        103, Connection Point, 1st Floor,<br>
+        Konena Agrahara, Murugeshpalya,<br>
+        Bangalore – 560017, Karnataka, India
+      </span>
+    </div>
+  </div>
+</div>
 
-  <footer><div class="footer-content"><p>© 2025 Western Systems Technologies LLP - All Rights Reserved</p></div></footer>
+<div class="contact-form-box">
+  <h3>Send Us a Message</h3>
+
+  <form id="contactForm">
+    <div class="form-row">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+    </div>
+
+    <div class="form-row">
+      <input type="text" placeholder="Phone Number" required>
+      <input type="text" placeholder="Company / Organization">
+    </div>
+
+    <div class="form-row">
+      <input type="text" placeholder="Subject">
+    </div>
+
+    <textarea rows="6" placeholder="Tell us about your requirement..." required></textarea>
+
+    <div class="captcha-box">
+      <div id="captchaQuestion" class="captcha-text"></div>
+      <input type="text" id="captchaInput" placeholder="Enter the result" autocomplete="off" required>
+    </div>
+
+    <button type="submit" class="cta-btn">Submit Inquiry</button>
+  </form>
+</div>
+
+</div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const form = document.getElementById("contactForm");
+  const questionBox = document.getElementById("captchaQuestion");
+  const input = document.getElementById("captchaInput");
+
+  const operators = ["+", "-"];
+  const operator = operators[Math.floor(Math.random() * operators.length)];
+
+  let num1 = Math.floor(Math.random() * 9) + 1;
+  let num2 = Math.floor(Math.random() * 9) + 1;
+
+  if (operator === "-" && num2 > num1) {
+    let temp = num1; num1 = num2; num2 = temp;
+  }
+
+  let answer = (operator === "+") ? num1 + num2 : num1 - num2;
+
+  function styledNumber(n) {
+    const rotate = Math.random() * 20 - 10;
+    const size = Math.random() * 12 + 22;
+    return `<span style="display:inline-block;transform: rotate(${rotate}deg);font-size:${size}px;font-weight:700;pointer-events:none;">${n}</span>`;
+  }
+
+  questionBox.innerHTML = `Verification: ${styledNumber(num1)} <span style="font-size:26px;font-weight:700;">${operator}</span> ${styledNumber(num2)} <span style="font-size:26px;font-weight:700;">=</span> ?`;
+
+  form.addEventListener("submit", (e) => {
+    if (parseInt(input.value) !== answer) {
+      e.preventDefault();
+      alert("Captcha incorrect. Please try again.");
+      input.value = "";
+      input.focus();
+    }
+  });
+
+});
+</script>
+
+<!-- FOOTER ADDED (ONLY CHANGE YOU REQUESTED) -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-column">
+      <h4>Western Systems Technologies LLP</h4>
+      <p>
+        Specialized engineering and technology solutions for RF & Microwave,
+        Precise Time & Frequency, and Advanced Photonics applications.
+      </p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <ul>
+        <li><strong>Email:</strong> info@wsysind.com</li>
+        <li><strong>Phone:</strong> +91-93437 48783</li>
+        <li><strong>Tel:</strong> +91-80-2523 4943</li>
+        <li><strong>Fax:</strong> +91-80-2523 5946</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Head Office</h4>
+      <p>
+        Western Systems Technologies LLP<br>
+        103, Connection Point, 1st Floor,<br>
+        Konena Agrahara, Murugeshpalya,<br>
+        Bengaluru – 560017, Karnataka, India
+      </p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © Western Systems Technologies LLP — All Rights Reserved
+  </div>
+</footer>
+
 </body>
 </html>

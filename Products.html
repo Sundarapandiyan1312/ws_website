@@ -6,11 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products | Western Systems Technologies LLP</title>
   <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 <body>
   <!-- Header -->
   <header class="navbar">
-    <div class="logo">WESTERN SYSTEMS TECHNOLOGIES LLP</div>
+    
+    <div class="logo">
+    <a href="index.html">
+      <img src="Image/logo.png" >
+    </a>
+    </div>
+
+    
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="about us.html">About Us</a>
@@ -20,10 +31,13 @@
       <a href="events.html">Events</a>
       <a href="contact.html">Contact</a>
 
-      <form class="nav-search" action="#" method="get">
-      <input type="text" placeholder="Search..." name="q">
-      <button type="submit">🔍</button>
-    </form>
+     <!-- SEARCH BOX ADDED -->
+  <form class="global-search" onsubmit="return false;">
+  <input type="text" id="globalSearchInput" placeholder="Search..." />
+  <button type="button">
+    <i class="fa fa-search"></i>
+  </button>
+</form>
     </nav>
   </header>
 
@@ -32,37 +46,136 @@
     <p>High-performance systems for signal generation, measurement, and synchronization.</p>
   </section>
 
-  <section class="grid">
-  <a href="rf-products.html" class="product-card">
-    <div class="card">
-      <img src="images/rf.jpg" alt="RF and Microwave">
-      <h3>RF, MICROWAVE, ANTENNA SYSTEMS AND SOFTWARE</h3>
+  <section class="products">
+  <div class="product-grid">
+    <div class="product-card">
+      <a href="rf-products.html">
+      <img src="Image/rf_image.png" alt="RF & Microwave" />
+      <h3>RF & Microwave Products, Antenna Systems</h3>
+      <p>IZT S1000 Signal Generator/simulator, Ambient LNAs, Antenna Design & Analysis Softwares.</p>
+      </a>
     </div>
-  </a>
 
-  <a href="time-products.html" class="product-card">
-    <div class="card">
-      <img src="images/antenna.jpg" alt="Time Systems">
+    <div class="product-card">
+      <a href="time-products.html">
+      <img src="Image/time_image.png" alt="Time & Frequency" />
       <h3>Precise Frequency & Time Systems, Time Synchronization Products</h3>
+      <p>Atomic Clocks, Frequency Comparators, Quartz Oscillators, SATRE.</p>
+      </a>
     </div>
-  </a>
 
-  <a href="optics-products.html" class="product-card">
-    <div class="card">
-      <img src="images/time.jpg" alt="Optics and Photonics">
-      <h3>Optics, Laser & Photonics</h3>
+    <div class="product-card">
+      <a href="optics-products.html">
+      <img src="Image/optics_image.png" alt="Optics, Laser & Photonics" />
+      <h3>Optics, Lasers & Photonics</h3>
+      <p>Frequency Combs, Femtosec Laser, Diode Laser, UMS, ORS, Quantum Laser Systems.</p>
+      </a>
     </div>
-  </a>
 
-  <a href="quantum-products.html" class="product-card">
-    <div class="card">
-      <img src="images/time.jpg" alt="Quantum">
-      <h3>Quantum Products</h3>
+    <div class="product-card">
+      <a href="Detection-systems.html">
+      <img src="Image/Detection sys.png" alt="Quantum">
+      <h3>Detection, Jamming and Spoofing Systems</h3>
+      <p>Radio Direction finder, GIDAS, NavTD M23, Eclipse, astor-iv</p>
+      </a>
     </div>
-  </a>
+
+    <div class="product-card">
+      <a href="rf-software.html">
+      <img src="Image/RFsoftware.png" alt="RF Software">
+      <h3>RF Softwares</h3>
+      <p>GRASP, ESTEAM, CHAMP 3D, Visualyse professional, Visualyse GSO V3</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a href="chemicals.html">
+      <img src="Image/Chemicals product.png" alt="RF Software">
+      <h3>Chemicals</h3>
+      <p>Acetone 99.9% LM, Ammonium Fluoride 40% LM, Isopropanol LM, Sulfuric Acid 96% LM, Methanol 99.9% LM</p>
+      </a>
+    </div>
+
+
+    
+
+  </div>
+
 </section>
 
+  <!-- Footer -->
+  <footer class="site-footer">
+  <div class="footer-container">
 
-  <footer><div class="footer-content"><p>© 2025 Western Systems Technologies LLP - All Rights Reserved</p></div></footer>
-</body>
+    <!-- Company Info -->
+    <div class="footer-column">
+      <h4>Western Systems Technologies LLP</h4>
+      <p>
+        Specialized engineering and technology solutions for RF & Microwave,
+        Precise Time & Frequency, and Advanced Photonics applications.
+      </p>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <ul>
+        <li><strong>Email:</strong> info@wsysind.com</li>
+        <li><strong>Phone:</strong> +91-93437 48783</li>
+        <li><strong>Tel:</strong> +91-80-2523 4943</li>
+        <li><strong>Fax:</strong> +91-80-2523 5946</li>
+      </ul>
+    </div>
+
+    <!-- Address -->
+    <div class="footer-column">
+      <h4>Head Office</h4>
+      <p>
+        Western Systems Technologies LLP<br>
+        103, Connection Point, 1st Floor,<br>
+        Konena Agrahara, Murugeshpalya,<br>
+        Bengaluru – 560017, Karnataka, India
+      </p>
+    </div>
+
+  </div>
+
+ 
+
+  
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    © Western Systems Technologies LLP — All Rights Reserved
+  </div>
+</footer>
 </html>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const searchInput = document.getElementById("globalSearchInput");
+  if (!searchInput) return;
+
+  // 🔥 ALL SEARCHABLE CARD TYPES
+  const cards = document.querySelectorAll(`
+    .rf-card,
+    .product-card,
+    .event-card,
+    .partner-box,
+    .application-card,
+    .time_product-card,
+    .value-card,
+    .team-card
+  `);
+
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase().trim();
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(query) ? "" : "none";
+    });
+  });
+
+});
+</script>

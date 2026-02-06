@@ -7,10 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Applications | Western Systems Technologies LLP</title>
   <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 <body>
   <header class="navbar">
-    <div class="logo">WESTERN SYSTEMS TECHNOLOGIES LLP</div>
+    
+    <div class="logo">
+    <a href="index.html">
+      <img src="Image/logo.png" >
+    </a>
+    </div>
+
+
+
+
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="about us.html">About Us</a>
@@ -20,32 +33,161 @@
       <a href="events.html">Events</a>
       <a href="contact.html">Contact</a>
 
-      <form class="nav-search" action="#" method="get">
-      <input type="text" placeholder="Search..." name="q">
-      <button type="submit">🔍</button>
-    </form>
+       <!-- SEARCH BOX ADDED -->
+  <form class="global-search" onsubmit="return false;">
+  <input type="text" id="globalSearchInput" placeholder="Search..." />
+  <button type="button">
+    <i class="fa fa-search"></i>
+  </button>
+</form>
+
+
     </nav>
   </header>
 
+  
   <section class="page-header">
     <h1>Applications</h1>
     <p>Empowering industries and research through precise engineering.</p>
   </section>
 
-  <section class="content">
-    <h2>Scientific Research</h2>
-    <p>Providing accurate timing and frequency systems for labs, observatories, and universities.</p>
+  <section class="applications-section">
 
-    <h2>Telecommunications</h2>
-    <p>Enabling robust and synchronized network infrastructure for next-generation communication.</p>
+  <div class="applications-intro">
+    <h2>Where Our Technologies Make an Impact</h2>
+    <p>
+      Western Systems Technologies LLP delivers mission-critical engineering solutions
+      across strategic sectors where precision, reliability, and long-term performance
+      are non-negotiable.
+    </p>
+  </div>
 
-    <h2>Defense & Aerospace</h2>
-    <p>Reliable RF and antenna systems for radar, navigation, and mission-critical operations.</p>
+  <div class="applications-grid">
 
-    <h2>Photonics & Quantum</h2>
-    <p>Precision lasers and optical systems driving the future of quantum metrology and spectroscopy.</p>
-  </section>
+    <div class="application-card">
+      <h3>Scientific Research & Metrology</h3>
+      <p>
+        High-precision frequency standards, timing systems, and photonic solutions
+        supporting national laboratories, observatories, and advanced research institutions.
+      </p>
+    </div>
 
-  <footer><div class="footer-content"><p>© 2025 Western Systems Technologies LLP - All Rights Reserved</p></div></footer>
-</body>
+    <div class="application-card">
+      <h3>Defense & Aerospace</h3>
+      <p>
+        RF, microwave, antenna, and timing solutions engineered for radar systems,
+        electronic warfare, navigation, avionics, and mission-critical defense platforms.
+      </p>
+    </div>
+
+    <div class="application-card">
+      <h3>Satellite & Space Systems</h3>
+      <p>
+        Ultra-stable timing references, RF signal generation, and synchronization
+        technologies for satellite payloads, ground stations, and space research missions.
+      </p>
+    </div>
+
+    <div class="application-card">
+      <h3>Telecommunications & 5G/6G</h3>
+      <p>
+        Precise synchronization, RF testing, and network timing solutions enabling
+        next-generation wireless, fiber, and high-speed communication infrastructure.
+      </p>
+    </div>
+
+    <div class="application-card">
+      <h3>Navigation & PNT Systems</h3>
+      <p>
+        Time and frequency technologies supporting GNSS, PNT, synchronization networks,
+        and resilient navigation systems for civil and defense applications.
+      </p>
+    </div>
+
+    <div class="application-card">
+      <h3>Photonics, Lasers & Quantum Technologies</h3>
+      <p>
+        Advanced photonic systems, frequency combs, and laser technologies driving
+        quantum communication, sensing, spectroscopy, and next-generation measurement science.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- Company Info -->
+    <div class="footer-column">
+      <h4>Western Systems Technologies LLP</h4>
+      <p>
+        Specialized engineering and technology solutions for RF & Microwave,
+        Precise Time & Frequency, and Advanced Photonics applications.
+      </p>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <ul>
+        <li><strong>Email:</strong> info@wsysind.com</li>
+        <li><strong>Phone:</strong> +91-93437 48783</li>
+        <li><strong>Tel:</strong> +91-80-2523 4943</li>
+        <li><strong>Fax:</strong> +91-80-2523 5946</li>
+      </ul>
+    </div>
+
+    <!-- Address -->
+    <div class="footer-column">
+      <h4>Head Office</h4>
+      <p>
+        Western Systems Technologies LLP<br>
+        103, Connection Point, 1st Floor,<br>
+        Konena Agrahara, Murugeshpalya,<br>
+        Bengaluru – 560017, Karnataka, India
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    © Western Systems Technologies LLP — All Rights Reserved
+  </div>
+</footer>
 </html>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const searchInput = document.getElementById("globalSearchInput");
+  if (!searchInput) return;
+
+  // 🔥 ALL SEARCHABLE CARD TYPES
+  const cards = document.querySelectorAll(`
+    .rf-card,
+    .product-card,
+    .event-card,
+    .partner-box,
+    .application-card,
+    .time_product-card,
+    .value-card,
+    .team-card
+  `);
+
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase().trim();
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(query) ? "" : "none";
+    });
+  });
+
+});
+</script>

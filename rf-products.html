@@ -5,10 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RF & Microwave Products | Western Systems Technologies LLP</title>
   <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 <body>
+  <!-- Header -->
   <header class="navbar">
-    <div class="logo">WESTERN SYSTEMS TECHNOLOGIES LLP</div>
+    
+    <div class="logo">
+    <a href="index.html">
+      <img src="Image/logo.png" >
+    </a>
+    </div>
+    
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="about us.html">About Us</a>
@@ -17,8 +28,19 @@
       <a href="applications.html">Applications</a>
       <a href="events.html">Events</a>
       <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+
+
+      <!-- SEARCH BOX ADDED -->
+  <form class="global-search" onsubmit="return false;">
+  <input type="text" id="globalSearchInput" placeholder="Search..." />
+  <button type="button">
+    <i class="fa fa-search"></i>
+  </button>
+</form>
+  
+</nav>
+
+</header>
 
   <section class="page-header">
     <h1>RF, Microwave & Antenna Systems</h1>
@@ -26,29 +48,389 @@
   </section>
 
   <section class="product-list">
-    <div class="product-card">
-      <img src="images/rf1.jpg" alt="">
-      <h3>RF Signal Generator</h3>
-      <p>High-purity signal sources for RF and microwave testing applications.</p>
+  <div class="rf-grid">
+
+    <!-- 1 -->
+     
+    <a href="https://www.izt-labs.de/izt/media/IZT-S1000-S1010-multi-channel-signal-generator.pdf" target="_blank">
+    <div class="rf-card">
+      <img src="Image/IZT_S1000.jpg" alt="RF Signal Generator">
+      <div class="rf-card-content">
+        <h3>RF Signal Generator</h3>
+        <p>
+          IZT S1000 and IZT S1010 are multi-channel signal generators for testing
+          I/Q data, Sirius, XM, HD Radio, AM, FM, DAB/+ and more.
+        </p>
+      </div>
+    </div>
+    </a>
+
+    <!-- 2 -->
+
+    <a href="https://www.izt-labs.de/izt/media/IZT-C3040-Satellite_Link_Simulator-PI.pdf" target="_blank">
+    <div class="rf-card">
+      <img src="Image/IZT_C3040.jpg" alt="Satellite Link Emulator">
+      <div class="rf-card-content">
+        <h3>Satellite Link Emulator</h3>
+        <p>
+          The IZT C3040 Satellite Link Emulator provides a cost-effective, time-saving
+          total solution with exceptional functionality for satellite and aircraft RF link testing.
+        </p>
+      </div>
+    </div>
+    </a>
+
+    <!-- 3 -->
+
+    <a href="https://www.izt-labs.de/izt/media/IZT-R5060-Monitoring_Receiver-PI.pdf">
+    <div class="rf-card">
+      <img src="Image/IZT_R5060.png" alt="IZT R5060 Monitoring Receiver">
+      <div class="rf-card-content">
+        <h3>IZT R5060 Monitoring Receiver</h3>
+        <p>
+          IZT R5060 is latest IZT’s generation monitoring receiver in a compact form factor. It has a precise frequency range from 9 kHz up to 6 GHz and an instantaneous bandwidth of 60 MHz.
+          The IZT R5060 is a medium performance monitoring wideband receiver:
+          It is designed for cost-efficient applications that require large bandwidths and low power consumption.
+        </p>
+      </div>
+    </div>
+    </a>
+
+    <!-- 4 -->
+
+    <a href="https://www.izt-labs.de/izt/media/IZT-R3410-R3411-Monitoring-Receiver-Brochure.pdf">
+    <div class="rf-card">
+      <img src="Image/IZT_R3410.jpg" alt="IZT R3410">
+      <div class="rf-card-content">
+        <h3>IZT R3410 & IZT R3411 Ruggedized Monitoring Receiver and RF Recorder</h3>
+        <p>
+          IZT R3410 / IZT R3411 is a portable receiver optimized for recording RF signals
+          in mobile and portable applications up to 25 MHz bandwidth.
+        </p>
+      </div>
+      </div>
+      </a>
+
+    <!-- 5 -->
+
+    <a href="https://www.izt-labs.de/izt/media/IZT-RecPlay-Record-and-Playback-System-Brochure.pdf">
+    <div class="rf-card">
+      <img src="Image/IZT_RecPlay-RF-Recording-and-Replay-System.jpg" alt="IZT RecPlay RF Recording and Replay System">
+      <div class="rf-card-content">
+        <h3>IZT RecPlay RF Recording and Replay System</h3>
+        <p>
+          IZT RecPlay is a full featured RF recording and replay system supporting
+          up to 25 MHz bandwidth from 9 kHz to 3 GHz.
+        </p>
+      </div>
+    </div>
+    </a>
+
+    <!-- 6 -->
+    <a href="https://www.callisto-space.com/datasheet/ambient/CELESTIA-CALLISTO-K-LNA-18.2-21.2GHz.pdf">
+    <div class="rf-card">
+      <img src="Image/k_band.png" alt="K band LNA">
+      <div class="rf-card-content">
+        <h3>K Band LNA</h3>
+        <p>
+          Very low noise K-band LNA covering 18.2–21.2 GHz with noise figure < 1.66 dB.
+        </p>
+      </div>
+    </div>
+    </a>
+
+    <!-- 7 -->
+    <a href="https://www.callisto-space.com/datasheet/ambient/CELESTIA-CALLISTO-Ka-LNA-25.5-27GHz.pdf">
+    <div class="rf-card">
+      <img src="Image/ka_band.png" alt="Ka Band LNA">
+      <div class="rf-card-content">
+        <h3>Ka Band LNA </h3>
+        <p>
+          Compact Ka-band LNA covering 25.5–27 GHz with noise figure < 1.56 dB.
+        </p>
+      </div>
+    </div>
+    </a>
+
+    <!-- 8 -->
+
+    <a href="https://www.callisto-space.com/datasheet/cryo/compact/CELESTIA-CALLISTO-Ka-compact-cryo-LNA-18.2-21.2GHz.pdf">
+    <div class="rf-card">
+      <img src="Image/k_cryo.png" alt="k_cryo">
+      <div class="rf-card-content">
+        <h3>K band compact cryo LNA for lunar communication & radioastronomy</h3>
+        <p>
+          Compact cryogenic LNA with noise temperature < 35 K for deep space applications.
+        </p>
+      </div>
+    </div>
+    </a>
+
+    <!-- 9 -->
+     
+    <a href="https://www.callisto-space.com/datasheet/cryo/compact/CELESTIA-CALLISTO-Ka-compact-cryo-LNA-31.8-32.3GHz.pdf">
+    <div class="rf-card">
+      <img src="Image/ka_cryo.png" alt="">
+      <div class="rf-card-content">
+        <h3>Ka Band Compact Cryo LNA </h3>
+        <p>
+          Cryogenic Ka-band LNA covering 31.8–32.3 GHz.
+        </p>
+      </div>
+    </div>
+    </a>
+
+    <!-- 10 -->
+
+    <a href="https://www.callisto-space.com/datasheet/cryo/compact/CELESTIA-CALLISTO-X-compact-cryo-LNA-7.25-8.5GHz.pdf">
+    <div class="rf-card">
+      <img src="Image/x_cryo.png" alt="X band">
+      <div class="rf-card-content">
+        <h3>X Band Compact Cryo LNA </h3>
+        <p>
+          X-band cryogenic LNA covering 7.25–8.5 GHz with ultra-low noise.Singel or dual channel, 
+          Satcom and radioastronomy applications, Superior performance, High reliability & efficiency, Ultra-low noise figure, 
+          High gain & low ripple, Low input & output VSWR, Compact size & lightweight, 
+          Wide operating temperature range, Redundant configurations (1:1, 1:2, N:1)
+        </p>
+      </div>
+    </div>
+    </a>
+
+    <!-- 11 -->
+
+    <a href="https://www.callisto-space.com/datasheet/cryo/compact/CELESTIA-CALLISTO-compact-cryo-QRFH-2.3-14GHz.pdf" >
+    <div class="rf-card">
+      <img src="Image/wide_band.png" alt="">
+    <div class="rf-card-content">
+  <h3>Cryogenic Compact QRFH receiver for radioastronomy and wideband applications</h3>
+  <p>State-of-the-art technology provides a very low noise figure over 12 GHz, The feed is included(caTech's QRFH design) but it is 
+    lodged inside the dewar to be cooled ad well. Operating freq. range 2.3 – 14 GHz, Noise temperature < 40 K, Noise figure < 0.56 dB, 
+    Input VSWR < 2.0:1, Output VSWR (50 Ω) < 1.9:1 (with output isolator), Gain >55 dB, Gain flatness 10 dB pp min, 14 dB typical,
+    Gain variation over temp. ±1.5 dB, Output P1dB +20 dBm</p>
+
+  </div>
+  </div>
+  </a>
+
+
+  <!-- 12 -->
+
+    <a href="Image/Pdf/qest.pdf" >
+    <div class="rf-card">
+        <img src="Image/ku_band.png" alt="">
+    <div class="rf-card-content">
+    <h3>3-axis Ku-Band Antenna System</h3>
+    <p>Characteristic: The first true 3 axes antenna system on the market. Customer benefits: 
+  Maximization of transmit and receive data throughput for equatorial flight scenarios. Parameter Specification-Frequency TX: 13.75 GHz to 14.50 GHz,
+  Rx: 10.70 GHz to 12.75 GHz, G/T 12.6 dB/K min, EIRP 42 dBW typ, Polarization H/V, Weight max. 42.86 kg [94.5 lbs], 
+  Size Ø: 916.2 mm [36.07 in] / H: 250.44 mm [9.86 in], Power typ. 27 W - max. 140 W</p>
+    
+  </div>
+  </div>
+  </a>
+
+
+    <!-- 13 -->
+
+    <a href="Image/Pdf/qest.pdf" >
+    <div class="rf-card">
+      <img src="Image/ku_band_dual.png" alt="">
+
+  <div class="rf-card-content">
+  <h3>Ka-Band Dual Panel Antenna System </h3>
+  <p>Ka-Band Dual Panel Satellite Antenna System Characteristic: LEO/GEO capable with highest possible performance 
+  due to dual panel technology with integrated BUC/BDC. Customer benefits: highest performance in SAA system class. 
+  Frequency : TX: 27.5 GHz to 30 GHz, Rx: 17.7 GHz to 20.2 GHz, G/T : 18.0 dB/K max. > 20° elevation > 14.0 dB/K min. 
+  Polarization : Circular switchable EIRP : 47.5dbw max @ MOP</p>
+  </div>
+  </div>
+  </a>
+
+
+
+    <!-- 14 -->
+
+    <a href="Image/Pdf/qest.pdf" >
+    <div class="rf-card">
+    <img src="Image/ku_band_compact.png" alt="">
+
+    <div class="rf-card-content">
+  <h3>Ku-Band compact Antenna System </h3>
+  <p>Ku-Band compact Antenna System Characteristic: Advanced compact antenna system configuration, with integrated BUC/BDC. 
+  Customer benefits: Simple installation and integration. highly reliable satcom system for mid to large Business or Military Aircraft. 
+  Frequency : TX: 13.75 GHz to 14.50 GHz, Rx: 10.70 GHz to 12.70 GHz, G/T : 10.5 dB/K min @10.7 GHz ground level. Polarization : H/V 
+  EIRP :>42 dbw max @ MOP</p>
+  </div>
+  </div>
+  </a>
+
+
+    <!-- 15 -->
+
+    <a href="https://www.eldesradar.com/wp-content/uploads/2025/10/WR-10X-Brochure-rev-2.pdf" >
+    <div class="rf-card">
+      <img src="Image/WR-10x.png" alt="">
+
+  <div class="rf-card-content">
+  <h3>WR-10X | X-Band Weather Radar, Single Polarization, Magnetron</h3>
+  <p>The WR-10X is a valuable tool for real-time monitoring of weather phenomena in areas with complex topography. 
+    It can be used advantageously at both urban and regional levels, or as a gap filler for an existing network. 
+    A mobile version can be deployed quickly in situations where meteorological alerts 
+    arise in areas with significant hydrological risks, becoming an important tool for civil protection emergencies. 
+   </p>
+  </div>
+  </div>
+  </a>
+
+
+    <!-- 15 -->
+
+    <a href="https://www.eldesradar.com/wp-content/uploads/2025/11/Metranet2-Brochure-rev.4.pdf" >
+    <div class="rf-card">
+    
+    <img src="Image/radar_suit.png" alt="">
+
+  <div class="rf-card-content">
+  <h3>METRANET II | Radar Data Processor Suite</h3>
+  <p>METRANET II RDP is a SW suite, running under a Linux based workstation networked with the ELDES 
+  signal and control processor “PERSER-PC” and with any number of Web client workstations, 
+  which share the RDP database and accept the RDP products distribution stream.METRANET II allows the ingest of the local or foreign radar polar moments in ELDES format
+  (customized ingest routines can be designed for third parties radar), the data distribution, 
+  the pre and post processing functions and the product generation. 
+  </p>
+
+  </div>
+  </div>
+  </a>
+
+
+    <!-- 16 -->
+
+    <a href="https://www.eldesradar.com/wp-content/uploads/2022/08/E-RDS-Brochure-rev1.0.pdf" >
+    <div class="rf-card">
+    <img src="Image/radar_datasys.jpg" alt="">
+
+  <div class="rf-card-content">
+  <h3>E-RDS | Radar Data System</h3>
+  <p>METhe ELDES Radar Data System (E-RDS) can be used to retrofit an existing weather radar system or, 
+  coupled with a modern transmitter and antenna control unit, to build a new state-of-the-art weather radar.
+  E-DRS includes a complete Microwave and Digital Receiver (IRX/DRX) and Radar Signal Processor (RSP),
+  a computerized Radar Control Processor (RCP) to control the whole radar system (antenna control unit and transmitter).</p>
+  </div>  
+  </div>
+  </a>
+
+  <!-- 17 -->
+
+  <a href="https://www.eldesradar.com/wp-content/uploads/2022/08/E-PRS-Brochure-rev02.pdf" >
+  <div class="rf-card">
+    <img src="Image/HWIL_ESM_ECM.png" alt="">
+
+  <div class="rf-card-content">
+  <h3>E-PRS | HWIL Programmable Radar Simulator for ESM/ECM Assessment</h3>
+  <p>Test the ESM/ECM effects on enemy Radars is to use an Hardware-in-the-loop Programmable Radar Simulator capable to emulate them.
+    This innovation is called E-PRS. The E-PRS can simulate a broad range of Radars, including ground based, 
+    airborne, shipborne ones and missile seekers too. The greater test reliability is ensured using a real radar digital receiver,
+    waveform generator and programmable signal and data processor. </p>
+  </div> 
+  </div>
+  </a>
+
+    <!-- 18 -->
+
+    <a href="https://www.eldesradar.com/wp-content/uploads/2025/09/E-PSS-Poseidon-Avionic-Brochure-rev03.pdf" >
+
+    <div class="rf-card">
+      <img src="Image/HWIL_antiship.png" alt="">
+
+    <div class="rf-card-content">
+  <h3>E-PSS Poseidon Avionic Version | POD mounted HWIL Programmable Seeker Simulator for ESM/ECM Assessment against Anti-Ship Missiles</h3>
+  <p>The development of the E-PSS Poseidon in the Avionic version stems from an ELDES in-depth study
+    on the operational requirements generated by a well-known military problem, the Anti-Ship Missiles Threats.
+    As is known, a warship has a large Radar Cross Section and radar-guided AShM are able to exploit it,
+    also their flight profiles make their early detection very difficult.For this reason, warships need an effective protection 
+    against these threats and these protection methods must be tested.
+    </p>
+  </div>
+  </div>
+  </a>
+
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- Company Info -->
+    <div class="footer-column">
+      <h4>Western Systems Technologies LLP</h4>
+      <p>
+        Specialized engineering and technology solutions for RF & Microwave,
+        Precise Time & Frequency, and Advanced Photonics applications.
+      </p>
     </div>
 
-    <div class="product-card">
-      <img src="images/rf2.jpg" alt="">
-      <h3>Vector Signal Analyzer</h3>
-      <p>Advanced VSA systems for communication and radar signal analysis.</p>
+    <!-- Contact Info -->
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <ul>
+        <li><strong>Email:</strong> info@wsysind.com</li>
+        <li><strong>Phone:</strong> +91-93437 48783</li>
+        <li><strong>Tel:</strong> +91-80-2523 4943</li>
+        <li><strong>Fax:</strong> +91-80-2523 5946</li>
+      </ul>
     </div>
 
-    <div class="product-card">
-      <img src="images/rf3.jpg" alt="">
-      <h3>Antenna Measurement System</h3>
-      <p>Precision antenna pattern and gain measurement setups.</p>
+    <!-- Address -->
+    <div class="footer-column">
+      <h4>Head Office</h4>
+      <p>
+        Western Systems Technologies LLP<br>
+        103, Connection Point, 1st Floor,<br>
+        Konena Agrahara, Murugeshpalya,<br>
+        Bengaluru – 560017, Karnataka, India
+      </p>
     </div>
-  </section>
 
-  <footer>
-    <div class="footer-content">
-      <p>© 2025 Western Systems Technologies LLP - All Rights Reserved</p>
-    </div>
-  </footer>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    © Western Systems Technologies LLP — All Rights Reserved
+  </div>
+</footer>
 </body>
 </html>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const searchInput = document.getElementById("globalSearchInput");
+  if (!searchInput) return;
+
+  // 🔥 ALL SEARCHABLE CARD TYPES
+  const cards = document.querySelectorAll(`
+    .rf-card,
+    .product-card,
+    .event-card,
+    .partner-box,
+    .application-card,
+    .time_product-card,
+    .value-card,
+    .team-card
+  `);
+
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase().trim();
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(query) ? "" : "none";
+    });
+  });
+
+});
+</script>
