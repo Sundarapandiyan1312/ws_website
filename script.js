@@ -53,3 +53,42 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// Wait until page loads
+document.addEventListener("DOMContentLoaded", function () {
+
+  // ===== MOBILE MENU TOGGLE =====
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", function () {
+      navLinks.classList.toggle("show");
+    });
+  }
+
+  // ===== GLOBAL SEARCH =====
+  const searchInput = document.getElementById("globalSearchInput");
+  if (!searchInput) return;
+
+  const cards = document.querySelectorAll(`
+    .rf-card,
+    .product-card,
+    .event-card,
+    .partner-box,
+    .application-card,
+    .time_product-card,
+    .value-card,
+    .team-card,
+    .customer-logo
+  `);
+
+  searchInput.addEventListener("input", function () {
+    const query = this.value.toLowerCase().trim();
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(query) ? "" : "none";
+    });
+  });
+
+});
