@@ -39,3 +39,17 @@ if (toggleBtn) {
     navLinks.classList.toggle("show-menu");
   });
 }
+
+
+// Mobile menu toggle (works for all pages)
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", function () {
+      navLinks.classList.toggle("show");
+    });
+  }
+});
+
