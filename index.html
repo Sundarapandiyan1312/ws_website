@@ -200,13 +200,14 @@
 
 
 <script>
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
+const toggle = document.getElementById("menuToggle");
+const nav = document.querySelector(".nav-links");
 
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("show");
 });
 </script>
+
 
 
 </body>
