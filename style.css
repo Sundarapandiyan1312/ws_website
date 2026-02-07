@@ -1914,3 +1914,89 @@ a {
   }
 
 }
+
+/* ==============================
+   MOBILE NAVBAR (ONLY MOBILE)
+   ============================== */
+.menu-toggle{
+  display:none;
+  background:none;
+  border:none;
+  font-size:26px;
+  cursor:pointer;
+}
+
+/* MOBILE VIEW ONLY */
+@media (max-width:768px){
+
+  /* show hamburger */
+  .menu-toggle{
+    display:block;
+  }
+
+  /* hide menu initially */
+  .nav-links{
+    position:absolute;
+    top:70px;
+    right:0;
+    width:100%;
+    background:#ffffff;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:0;
+    display:none;
+    padding:20px 0;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  }
+
+  /* menu items */
+  .nav-links li{
+    width:100%;
+    list-style:none;
+  }
+
+  .nav-links a{
+    display:block;
+    padding:15px 30px;
+    width:100%;
+    border-bottom:1px solid #eee;
+  }
+
+  /* when menu open */
+  .nav-links.show{
+    display:flex;
+  }
+
+  /* hide search in mobile (no space) */
+  .global-search{
+    display:none;
+  }
+
+}
+/* ================================
+   📱 FIX HAMBURGER POSITION (ONLY MOBILE)
+   This will NOT affect desktop
+================================ */
+
+@media (max-width:768px){
+
+  /* Make navbar act as positioning parent */
+  .navbar{
+    position:relative;
+    flex-direction:row !important;   /* keep logo left */
+    align-items:center;
+    justify-content:space-between;
+  }
+
+  /* Position hamburger in right corner */
+  .menu-toggle{
+    display:block;
+    position:absolute;
+    right:20px;
+    top:22px;
+    font-size:26px;
+    color:#333;
+    z-index:999;
+  }
+
+}
