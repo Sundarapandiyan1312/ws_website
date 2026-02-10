@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .rf-card,
     .product-card,
     .event-card,
-    .partner-box,
+    .partners-box,
     .application-card,
     .time_product-card,
     .value-card,

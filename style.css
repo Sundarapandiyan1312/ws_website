@@ -580,6 +580,28 @@ body {
   box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
 
+
+/* Star bullets for specialization list */
+.specialization-list {
+  list-style: none;
+  padding-left: 100px;   /* moved more to right */
+  margin-top: 10px;
+}
+
+.specialization-list li {
+  position: relative;
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+
+.specialization-list li::before {
+  content: "★";
+  position: absolute;
+  left: -28px;          /* adjust star position */
+  color: black;         /* star color changed to black */
+  font-size: 14px;
+}
+
 /* ================================ */
 /* PARTNERS GRID – 3 PER ROW LAYOUT */
 /* ================================ */
@@ -1707,6 +1729,11 @@ a {
     left: 0;
     top: 0;
   }
+
+
+
+  
+
 
   /* ===== HERO FIX ===== */
   .hero,
