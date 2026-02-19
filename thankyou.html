@@ -32,6 +32,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     <a href="applications.html">Applications</a>
     <a href="events.html">Events</a>
     <a href="contact.html">Contact</a>
+
+    <form class="global-search" onsubmit="return false;">
+  <input type="text" id="globalSearchInput" placeholder="Search..." />
+  <button type="button">
+    <i class="fa fa-search"></i>
+  </button>
   </nav>
 </header>
 
@@ -48,7 +54,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <div class="contact-container">
 
 <div class="contact-info">
-  <h2>Noted. Catch You Soon 🚀</h2>
+  <h2>Noted. Catch You Soon </h2>
   <p>
     We appreciate you reaching out to Western Systems Technologies LLP.
     Our team will review your inquiry and get back to you shortly.
@@ -70,6 +76,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     <a href="contact.html" class="cta-btn">Contact Again</a>
 
   </div>
+
+  <div class="space-area">
+   <div class="moon"></div>
+   <div class="rocket">🚀</div>
+   <div class="explosion">💥</div>
+</div>
+
+
 
 </div>
 
@@ -119,3 +133,34 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <script src="script.js"></script>
 </body>
 </html>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const searchInput = document.getElementById("globalSearchInput");
+  if (!searchInput) return;
+
+  // 🔥 ALL SEARCHABLE CARD TYPES
+  const cards = document.querySelectorAll(`
+    .rf-card,
+    .product-card,
+    .event-card,
+    .partner-box,
+    .application-card,
+    .time_product-card,
+    .value-card,
+    .team-card
+  `);
+
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase().trim();
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(query) ? "" : "none";
+    });
+  });
+
+});
+</script>
