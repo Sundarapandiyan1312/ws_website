@@ -2207,3 +2207,97 @@ a {
 
     100%{ opacity:0; }
 }
+
+
+/* ===============================
+   MOBILE VERSION (≤768px)
+   =============================== */
+@media (max-width:768px){
+
+/* smaller animation area */
+.space-area{
+    height:120px;
+    margin-top:10px;
+}
+
+/* 🌙 Moon resize + reposition */
+.moon{
+    width:70px;
+    height:70px;
+    right:10px;
+    top:-40px;
+    box-shadow:0 0 15px #f6e8a6;
+}
+
+.moon::after{
+    width:70px;
+    height:70px;
+    left:18px;
+}
+
+/* 🚀 Rocket resize */
+.rocket{
+    font-size:28px;
+    bottom:0;
+}
+
+/* 💥 Explosion resize */
+.explosion{
+    font-size:34px;
+    right:20px;
+    top:-40px;
+}
+
+/* 📐 New rocket path for small screen */
+@keyframes rocketFly{
+
+    0%{
+        transform: translate(0,0) rotate(-25deg);
+        opacity:0;
+    }
+
+    10%{ opacity:1; }
+
+    60%{
+        transform: translate(190px,-95px) rotate(10deg);
+        opacity:1;
+    }
+
+    /* hit moon */
+    72%{
+        transform: translate(210px,-105px) rotate(15deg);
+        opacity:1;
+    }
+
+    75%{
+        opacity:0;
+        transform: translate(210px,-105px) scale(0.4);
+    }
+
+    100%{ opacity:0; }
+}
+
+/* 💥 Explosion timing same but scaled */
+@keyframes explode{
+
+    0%,70%{
+        opacity:0;
+        transform:scale(0.3);
+    }
+
+    74%{
+        opacity:1;
+        transform:scale(1.4);
+    }
+
+    80%{ transform:scale(1); }
+
+    90%{
+        opacity:0;
+        transform:scale(0.2);
+    }
+
+    100%{ opacity:0; }
+}
+
+}
