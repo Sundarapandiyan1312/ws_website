@@ -83,30 +83,41 @@
 <div class="contact-form-box">
   <h3>Send Us a Message</h3>
 
-  <form id="contactForm">
-    <div class="form-row">
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email Address" required>
-    </div>
+    <form id="contactForm" 
+      action="https://formspree.io/f/xdaldbre" 
+      method="POST">
 
-    <div class="form-row">
-      <input type="text" placeholder="Phone Number" required>
-      <input type="text" placeholder="Company / Organization">
-    </div>
+  <div class="form-row">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+  </div>
 
-    <div class="form-row">
-      <input type="text" placeholder="Subject">
-    </div>
+  <div class="form-row">
+    <input type="text" name="phone" placeholder="Phone Number" required>
+    <input type="text" name="company" placeholder="Company / Organization">
+  </div>
 
-    <textarea rows="6" placeholder="Tell us about your requirement..." required></textarea>
+  <div class="form-row">
+    <input type="text" name="subject" placeholder="Subject">
+  </div>
 
-    <div class="captcha-box">
-      <div id="captchaQuestion" class="captcha-text"></div>
-      <input type="text" id="captchaInput" placeholder="Enter the result" autocomplete="off" required>
-    </div>
+  <textarea name="message" rows="6" placeholder="Tell us about your requirement..." required></textarea>
 
-    <button type="submit" class="cta-btn">Submit Inquiry</button>
-  </form>
+  <!-- captcha stays same -->
+  <div class="captcha-box">
+    <div id="captchaQuestion" class="captcha-text"></div>
+    <input type="text" id="captchaInput" placeholder="Enter the result" autocomplete="off" required>
+  </div>
+
+  <!-- hidden fields -->
+  <input type="hidden" name="_subject" value="New Inquiry from WSys Website">
+  <input type="hidden" name="_template" value="table">
+
+  <input type="hidden" name="_next" value="https://wsysind.com/thankyou.html">
+
+  <button type="submit" class="cta-btn">Submit Inquiry</button>
+
+</form>
 </div>
 
 </div>
