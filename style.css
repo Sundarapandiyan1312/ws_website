@@ -2068,3 +2068,19 @@ a {
 
 
 
+/* Make all team grids identical and left-aligned */
+.team-section {
+  width: 100%;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 100%;
+}
+
+/* IMPORTANT: prevent cards from stretching weirdly */
+.team-card {
+  width: 100%;
+}
