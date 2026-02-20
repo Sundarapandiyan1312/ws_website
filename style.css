@@ -2084,3 +2084,24 @@ a {
 .team-card {
   width: 100%;
 }
+
+.highlight-product {
+  animation: highlightGlow 2s ease-in-out 3;
+  border: 2px solid #007bff;
+  box-shadow: 0 0 15px #007bff;
+}
+
+@keyframes highlightGlow {
+  0% { box-shadow: 0 0 5px #007bff; }
+  50% { box-shadow: 0 0 25px #007bff; }
+  100% { box-shadow: 0 0 5px #007bff; }
+}
+
+.application-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.application-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}

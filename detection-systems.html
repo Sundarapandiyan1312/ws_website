@@ -8,10 +8,9 @@
 
   <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="description" 
+      content="Advanced detection systems including VHF radio direction finders, 
+      GNSS interference detection, C-UAS systems, and jamming solutions by Western Systems Technologies LLP.">
 
 </head>
 <body>
@@ -19,7 +18,7 @@
     
     <div class="logo">
     <a href="index.html">
-      <img src="Image/logo.png" >
+      <img src="Image/logo.png" alt="Western Systems Technologies LLP Logo">
     </a>
     </div>
 
@@ -38,7 +37,7 @@
       <a href="contact.html">Contact</a>
 
 
-  <form class="global-search" onsubmit="return false;">
+  <form class="global-search" role="search" autocomplete="off">
   <input type="text" id="globalSearchInput" placeholder="Search..." />
   <button type="button">
     <i class="fa fa-search"></i>
@@ -49,7 +48,8 @@
 
   <section class="page-header">
     <h1>Detection Systems</h1>
-    <p></p>
+    <p>Advanced detection systems including VHF radio direction finders, 
+      GNSS interference detection, C-UAS systems, and jamming.</p>
   </section>
 
   <section class="product-list">
@@ -58,9 +58,12 @@
 
       <!-- 1 -->
 
-    <a href="https://www.izt-labs.de/izt/media/IZT-R5509-VHF_Radio_Direction_Finder-PI.pdf">
+    <a href="https://www.izt-labs.de/izt/media/IZT-R5509-VHF_Radio_Direction_Finder-PI.pdf" target="_blank" 
+    rel="noopener noreferrer">
     <div class="rf-card">
-      <img src="Image/IZT_R5500.jpg" alt="IZT R5509 Radio Direction Finder">
+      <img src="Image/IZT_R5500.jpg" 
+      alt="IZT R5509 Radio Direction Finder"
+      loading="lazy">
       <div class="rf-card-content">
         <h3>IZT R5509 VHF Radio Direction Finder</h3>
         <p>
@@ -73,9 +76,9 @@
 
     <!-- 2 -->
     
-    <a href="https://www.ohb.de/fileadmin/ohb/Downloads/GIDAS_en.pdf">
+    <a href="https://www.ohb.de/fileadmin/ohb/Downloads/GIDAS_en.pdf" target="_blank" rel="noopener noreferrer">
     <div class="rf-card">
-      <img src="Image/GIDAS.png" alt="GIDAS">
+      <img src="Image/GIDAS.png" alt="GIDAS" loading="lazy">
       <div class="rf-card-content">
         <h3>OHB - GIDAS</h3>
         <p>
@@ -88,9 +91,9 @@
    
     <!--3-->
 
-    <a href="https://www.ohb-austria.at/wp-content/uploads/documents/navtd_m23_productsheet.pdf">
+    <a href="https://www.ohb-austria.at/wp-content/uploads/documents/navtd_m23_productsheet.pdf" target="_blank" rel="noopener noreferrer">
     <div class="rf-card">
-      <img src="Image/NavTDM23.png" alt="OHB - NavTD M23 ">
+      <img src="Image/NavTDM23.png" alt="OHB - NavTD M23" loading="lazy">
       <div class="rf-card-content">
         <h3>OHB - NavTD M23 </h3>
         <p>
@@ -105,9 +108,9 @@
 
     <!--4-->
 
-    <a href="https://oscilion.com/eclipse/">
+    <a href="https://oscilion.com/eclipse/" target="_blank" rel="noopener noreferrer">
     <div class="rf-card">
-      <img src="Image/Oscilion-Eclipse.png" alt="Eclipse – C-UAS system ">
+      <img src="Image/Oscilion-Eclipse.png" alt="Eclipse – C-UAS system " loading="lazy">
       <div class="rf-card-content">
         <h3>Eclipse – C-UAS system</h3>
         <p>
@@ -121,9 +124,9 @@
 
     <!--5-->
 
-    <a href="https://oscilion.com/astor-iv/">
+    <a href="https://oscilion.com/astor-iv/" target="_blank" rel="noopener noreferrer">
     <div class="rf-card">
-      <img src="Image/Oscilion - Astor.jpg" alt="Oscilion astor-iv ">
+      <img src="Image/Oscilion - Astor.jpg" alt="Oscilion astor-iv " loading="lazy">
       <div class="rf-card-content">
         <h3>Oscilion - Astor IV</h3>
         <p>
@@ -140,7 +143,6 @@
 
   <script src="script.js"></script>
 
-</body>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -187,32 +189,3 @@
 </body>
 </html>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  const searchInput = document.getElementById("globalSearchInput");
-  if (!searchInput) return;
-
-  // 🔥 ALL SEARCHABLE CARD TYPES
-  const cards = document.querySelectorAll(`
-    .rf-card,
-    .product-card,
-    .event-card,
-    .partner-box,
-    .application-card,
-    .time_product-card,
-    .value-card,
-    .team-card
-  `);
-
-  searchInput.addEventListener("input", () => {
-    const query = searchInput.value.toLowerCase().trim();
-
-    cards.forEach(card => {
-      const text = card.innerText.toLowerCase();
-      card.style.display = text.includes(query) ? "" : "none";
-    });
-  });
-
-});
-</script>

@@ -9,10 +9,6 @@
   <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-
-
 </head>
 
 <body>
@@ -20,7 +16,7 @@
 <header class="navbar">
   <div class="logo">
     <a href="index.html">
-      <img src="Image/logo.png">
+      <img src="Image/logo.png" alt="Western Systems Technologies LLP Logo">
     </a>
   </div>
 
@@ -85,7 +81,8 @@
 
     <form id="contactForm" 
       action="sendmail.php" 
-      method="POST">
+      method="POST"
+      autocomplete="off">
 
   <div class="form-row">
     <input type="text" name="name" placeholder="Full Name" required>
@@ -106,7 +103,7 @@
   <!-- captcha stays same -->
   <div class="captcha-box">
     <div id="captchaQuestion" class="captcha-text"></div>
-    <input type="text" id="captchaInput" placeholder="Enter the result" autocomplete="off" required>
+    <input type="text" id="captchaInput" name="captcha" placeholder="Enter the result" autocomplete="off" required>
   </div>
 
 
@@ -158,8 +155,6 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <script src="script.js"></script>
-
-</body>
 
 <!-- FOOTER ADDED (ONLY CHANGE YOU REQUESTED) -->
 <footer class="site-footer">

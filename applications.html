@@ -11,7 +11,7 @@
   <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
 
 
 </head>
@@ -20,7 +20,7 @@
     
     <div class="logo">
     <a href="index.html">
-      <img src="Image/logo.png" >
+      <img src="Image/logo.png" alt="Western Systems Technologies LLP Logo">
     </a>
     </div>
 
@@ -124,7 +124,7 @@
 
 <script src="script.js"></script>
 
-</body>
+
 
 
   <!-- Footer -->
@@ -169,35 +169,8 @@
     © Western Systems Technologies LLP — All Rights Reserved
   </div>
 </footer>
+</body>
 </html>
 
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
 
-  const searchInput = document.getElementById("globalSearchInput");
-  if (!searchInput) return;
-
-  // 🔥 ALL SEARCHABLE CARD TYPES
-  const cards = document.querySelectorAll(`
-    .rf-card,
-    .product-card,
-    .event-card,
-    .partner-box,
-    .application-card,
-    .time_product-card,
-    .value-card,
-    .team-card
-  `);
-
-  searchInput.addEventListener("input", () => {
-    const query = searchInput.value.toLowerCase().trim();
-
-    cards.forEach(card => {
-      const text = card.innerText.toLowerCase();
-      card.style.display = text.includes(query) ? "" : "none";
-    });
-  });
-
-});
-</script>
