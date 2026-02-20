@@ -10,7 +10,9 @@
   <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Western Systems Technologies LLP participates in leading international 
+  technology exhibitions, conferences, and symposiums across RF, photonics, microwave, quantum sensing, 
+  and space technology sectors.">
 
 
 </head>
@@ -18,10 +20,10 @@
   <header class="navbar">
 
     <div class="logo">
-    <a href="index.html">
-      <img src="Image/logo.png" >
-    </a>
-    </div>
+  <a href="index.html">
+    <img src="Image/logo.png" alt="Western Systems Technologies LLP Logo">
+  </a>
+</div>
 
     <button class="menu-toggle" id="menuToggle">
       <i class="fa fa-bars"></i>
@@ -39,7 +41,7 @@
       <a href="contact.html">Contact</a>
 
      <!-- SEARCH BOX ADDED -->
-  <form class="global-search" onsubmit="return false;">
+  <form class="global-search" role="search" autocomplete="off">
   <input type="text" id="globalSearchInput" placeholder="Search..." />
   <button type="button">
     <i class="fa fa-search"></i>
@@ -57,7 +59,7 @@
     <div class="event-card"><h3>IEEE MAPCON 2026 </h3><p>Nagpur, Maharashtra. December 14–18, 2026 – Microwave, Antennas, and Propagation Conference.</p></div>
 
 
-    <a href="https://world-of-photonics-india.com/en/">
+    <a href="https://world-of-photonics-india.com/en/" target="_blank" rel="noopener noreferrer">
     <div class="event-card">
       <h3>Laser World of Photonics India - 2026</h3>
       <p>Bangalore, Karnataka. September 16–18, 2026 – India’s platform for laser and optical technologies 
@@ -66,23 +68,23 @@
     </a>
     
 
-    <a href="https://ieeemapcon.org/">
+    <a href="https://ieeemapcon.org/" target="_blank" rel="noopener noreferrer" >
     <div class="event-card">
       <h3>IEEE MAPCON 2025</h3>
       <p>Kochi, Kerala. December 14-18, 2025 – Microwaves, Antennas and Propagation Conference.</p>
     </div>
     </a>
 
-    <a href="https://www.spacetechexpo-europe.com/">
+    <a href="https://www.spacetechexpo-europe.com/" target="_blank" rel="noopener noreferrer">
     <div class="event-card">
-      <h3>Space tech expo bremen - 2025</h3>
+      <h3>Space Tech Expo Bremen – 2025</h3>
       <p>IIT Bremen, Germany. November 18–20, 2025 – Launch vehicles, satellite subsystems, space technology, 
         and B2B matchmaking.</p>
     </div>
     </a>
 
 
-    <a href="https://sites.google.com/view/ufs-2025">
+    <a href="https://sites.google.com/view/ufs-2025" target="_blank" rel="noopener noreferrer">
     <div class="event-card">
       <h3>Ultrafast Science - 2025</h3>
       <p>IIT Hyderabad, Telangana. November 13–15, 2025 – Focuses on cutting-edge advancements in ultrafast science.
@@ -91,7 +93,7 @@
     </a>
 
 
-    <a href="https://world-of-photonics.com/en/trade-fair/press/trade-fair-photos-logos/">
+    <a href="https://world-of-photonics.com/en/trade-fair/press/trade-fair-photos-logos/" target="_blank" rel="noopener noreferrer">
     <div class="event-card">
       <h3>Laser World of Photonics India - 2025</h3>
       <p>Bangalore, Karnataka. September 17–19, 2025 – Laser production technologies, optics, 
@@ -99,7 +101,7 @@
     </div>
     </a>
 
-    <a href="https://www.tcgcrest.org/iceqsm-2025/">
+    <a href="https://www.tcgcrest.org/iceqsm-2025/" target="_blank" rel="noopener noreferrer">
     <div class="event-card">
       <h3>International Conference and Exposium on Quantum Sensing and Metrology 2025 (ICEQSM)</h3>
       <p>Kolkata, India. 10th-13th September - 2025, – Aims to bridge theoretical quantum advancements 
@@ -107,7 +109,7 @@
       </div>
     </a>
 
-    <a href="https://quantumindiabengaluru.com/">
+    <a href="https://quantumindiabengaluru.com/" target="_blank" rel="noopener noreferrer">
     <div class="event-card">
       <h3>Quantum India Bengaluru (QIB) 2025</h3>
       <p>Bangalore, India. July 31 – August 1 - 2025, – Focused on building a "Qubits to Society" ecosystem, 
@@ -117,7 +119,7 @@
     </a>
 
 
-    <a href="https://2025.aoceurope.org/" target="_blank" class="event-link">
+    <a href="https://2025.aoceurope.org/" target="_blank" rel="noopener noreferrer">
   <div class="event-card">
     <h3>AOC Europe 2025</h3>
     <p>
@@ -129,15 +131,11 @@
 </a>
 
 
-
-
-
-
   </section>
 
   <script src="script.js"></script>
 
-</body>
+
 
 
 <!-- Footer -->
@@ -182,35 +180,7 @@
     © Western Systems Technologies LLP — All Rights Reserved
   </div>
 </footer>
+</body>
 </html>
 
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  const searchInput = document.getElementById("globalSearchInput");
-  if (!searchInput) return;
-
-  // 🔥 ALL SEARCHABLE CARD TYPES
-  const cards = document.querySelectorAll(`
-    .rf-card,
-    .product-card,
-    .event-card,
-    .partner-box,
-    .application-card,
-    .time_product-card,
-    .value-card,
-    .team-card
-  `);
-
-  searchInput.addEventListener("input", () => {
-    const query = searchInput.value.toLowerCase().trim();
-
-    cards.forEach(card => {
-      const text = card.innerText.toLowerCase();
-      card.style.display = text.includes(query) ? "" : "none";
-    });
-  });
-
-});
-</script>

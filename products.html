@@ -10,7 +10,9 @@
   <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore RF & Microwave systems, Precise Time & Frequency solutions, 
+  Optics & Photonics, Detection systems, RF software and specialty chemicals from 
+  Western Systems Technologies LLP.">
 
 
 </head>
@@ -20,7 +22,7 @@
     
     <div class="logo">
     <a href="index.html">
-      <img src="Image/logo.png" >
+      <img src="Image/logo.png" alt="Western Systems Technologies LLP Logo">
     </a>
     </div>
 
@@ -40,7 +42,7 @@
       <a href="contact.html">Contact</a>
 
      <!-- SEARCH BOX ADDED -->
-  <form class="global-search" onsubmit="return false;">
+  <form class="global-search" role="search" autocomplete="off">
   <input type="text" id="globalSearchInput" placeholder="Search..." />
   <button type="button">
     <i class="fa fa-search"></i>
@@ -58,7 +60,7 @@
   <div class="product-grid">
     <div class="product-card">
       <a href="rf-products.html">
-      <img src="Image/rf_image.png" alt="RF & Microwave" />
+      <img src="Image/rf_image.png" alt="RF & Microwave" loading="lazy">
       <h3>RF & Microwave Products, Antenna Systems</h3>
       <p>IZT S1000 Signal Generator/simulator, Ambient LNAs, Antenna Design & Analysis Softwares.</p>
       </a>
@@ -66,7 +68,7 @@
 
     <div class="product-card">
       <a href="time-products.html">
-      <img src="Image/time_image.png" alt="Time & Frequency" />
+      <img src="Image/time_image.png" alt="Time & Frequency" loading="lazy">
       <h3>Precise Frequency & Time Systems, Time Synchronization Products</h3>
       <p>Atomic Clocks, Frequency Comparators, Quartz Oscillators, SATRE.</p>
       </a>
@@ -74,7 +76,7 @@
 
     <div class="product-card">
       <a href="optics-products.html">
-      <img src="Image/optics_image.png" alt="Optics, Laser & Photonics" />
+      <img src="Image/optics_image.png" alt="Optics, Laser & Photonics" loading="lazy">
       <h3>Optics, Lasers & Photonics</h3>
       <p>Frequency Combs, Femtosec Laser, Diode Laser, UMS, ORS, Quantum Laser Systems.</p>
       </a>
@@ -82,7 +84,7 @@
 
     <div class="product-card">
       <a href="detection-systems.html">
-      <img src="Image/Detection sys.png" alt="Quantum">
+      <img src="Image/Detection sys.png" alt="Detection" loading="lazy">
       <h3>Detection, Jamming and Spoofing Systems</h3>
       <p>Radio Direction finder, GIDAS, NavTD M23, Eclipse, astor-iv</p>
       </a>
@@ -90,7 +92,7 @@
 
     <div class="product-card">
       <a href="rf-software.html">
-      <img src="Image/RFsoftware.png" alt="RF Software">
+      <img src="Image/RFsoftware.png" alt="RF Software" loading="lazy">
       <h3>RF Softwares</h3>
       <p>GRASP, ESTEAM, CHAMP 3D, Visualyse professional, Visualyse GSO V3</p>
       </a>
@@ -98,7 +100,7 @@
 
     <div class="product-card">
       <a href="chemicals.html">
-      <img src="Image/Chemicals product.png" alt="RF Software">
+      <img src="Image/Chemicals product.png" alt="RF Software" loading="lazy">
       <h3>Chemicals</h3>
       <p>Acetone 99.9% LM, Ammonium Fluoride 40% LM, Isopropanol LM, Sulfuric Acid 96% LM, Methanol 99.9% LM</p>
       </a>
@@ -113,8 +115,6 @@
 
 <script src="script.js"></script>
 
-
-</body>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -161,34 +161,8 @@
     © Western Systems Technologies LLP — All Rights Reserved
   </div>
 </footer>
+
+</body>
 </html>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
 
-  const searchInput = document.getElementById("globalSearchInput");
-  if (!searchInput) return;
-
-  // 🔥 ALL SEARCHABLE CARD TYPES
-  const cards = document.querySelectorAll(`
-    .rf-card,
-    .product-card,
-    .event-card,
-    .partner-box,
-    .application-card,
-    .time_product-card,
-    .value-card,
-    .team-card
-  `);
-
-  searchInput.addEventListener("input", () => {
-    const query = searchInput.value.toLowerCase().trim();
-
-    cards.forEach(card => {
-      const text = card.innerText.toLowerCase();
-      card.style.display = text.includes(query) ? "" : "none";
-    });
-  });
-
-});
-</script>
