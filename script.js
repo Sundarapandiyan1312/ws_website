@@ -12,7 +12,7 @@ const globalSearchDatabase = [
   { name: "WR-10X Weather Radar", keywords: ["wr10x", "weather radar"], url: "rf-products.html#rf-wr10x" },
 
   // -------- TIME PRODUCTS --------
-  { name: "Active Hydrogen Maser VCH-1003M", keywords: ["vch1003m", "hydrogen maser"], url: "time-products.html#time-vch1003m" },
+  { name: "Active Hydrogen Maser VCH-1003M", keywords: ["vch 1003m", "hydrogen maser"], url: "time-products.html#time-vch1003m" },
   { name: "Passive Hydrogen Maser VCH-1008M", keywords: ["vch1008m", "maser passive"], url: "time-products.html#time-vch1008m" },
   { name: "Frequency Comparator VCH-315M", keywords: ["vch315m", "frequency comparator"], url: "time-products.html#time-vch315m" },
   { name: "Rubidium Oscillator VCH-311", keywords: ["vch311", "rubidium oscillator"], url: "time-products.html#time-vch311" },
